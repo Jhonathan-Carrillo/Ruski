@@ -1,0 +1,26 @@
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 100px;
+}
+
+.left{
+    padding-right: 10%;
+    
+}
+
+.right{
+    
+}
+
+.errorMessage{
+    color: red;
+    border: 2px solid red;
+    padding: 10px;
+    display: none;
+}
+
+.errorMessage.visible{
+    display: table;
+    margin: 10px 0 20px;
+}

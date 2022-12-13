@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herhalingsopdracht</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body id="index">
+
+    <div class="wrapper">
+
+        <div class="left">
+            <h1>Herhalingsopdracht</h1>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo earum illum quibusdam praesentium molestias obcaecati eveniet quam perferendis, veritatis perspiciatis cum. Nam corporis unde explicabo repudiandae dolor doloribus, qui eligendi?</p>
+        </div>
+
+        <div class="right">
+            <form id="formulier" action="bedankt.html" method="get">
+
+                <div class="inputGroup">
+                    <label for="fname">Voornaam</label>
+                    <input type="text" name="fname" id="fname" placeholder="voorbeeld" />
+                    <div class="errorMessage">Gelieve dit veld in te vullen.</div>
+                </div>
+
+                <div class="inputGroup">
+                    <label for="email">E-mailades</label>
+                    <input type="email" name="email" id="email" />
+                    <div class="errorMessage">Gelieve dit veld in te vullen.</div>
+                </div>
+
+                <div class="inputGroup">
+                    <label for="geslacht-man">Man</label>
+                    <input type="radio" name="geslacht" id="geslacht-man" value="man" />
+                    
+                    <label for="geslacht-vrouw">Vrouw</label>
+                    <input type="radio" name="geslacht" id="geslacht-vrouw" value="vrouw" />
+                    
+                    <label for="geslacht-andere">Andere</label>
+                    <input type="radio" name="geslacht" id="geslacht-andere" value="andere" />
+
+                    <div class="errorMessage" id="geslachtError">Gelieve dit veld in te vullen.</div>
+                </div>
+
+                <div class="inputGroup">
+                    <label for="text">Vertel iets...</label>
+                    <textarea name="text" id="text" cols="30" rows="3"></textarea>
+                    <div class="errorMessage">Gelieve dit veld in te vullen.</div>
+                </div>
+
+                <div class="inputGroup">
+                    <label for="file">Laad een bestand op</label>
+                    <input type="file" name="file" id="file" />
+                    <div class="errorMessage">Gelieve dit veld in te vullen.</div>
+                </div>
+
+                <button type="submit">Inschrijven</button>
+
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

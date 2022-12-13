@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script> 
+
+//Empezar pagina
+addEventListener('DOMContentLoaded', (event) => {
+//DataCode
+});
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//Array buttom en var for the if
+kleuren = ["yellow", "blue", "red", "purple"];
+var i = 0;
+var btn =0;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//Making the function
+function createButton() {
+        const newButton = document.createElement("button");
+        document.body.appendChild(newButton);
+        newButton.innerHTML = "Hallo";
+        newButton.classList.add(kleuren[i]);
+
+// if voor herhalen (kleine loop)
+        i++;
+        btn++;
+        if (i > 3) {
+            i = 0
+        }
+
+// add button if click
+newButton.addEventListener("click", () => {
+            if (document.querySelectorAll("button").length < 20) {
+                createButton();   
+            }
+
+// if there are more than 20 buttons then delete all
+            if (document.querySelectorAll("button").length >= 20) {
+                location.reload();  
+            }
+          
+        });
+    };
+createButton();
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//SCROLL
+window.addEventListener("scroll", function () {
+        if (document.querySelectorAll("button").length < Infinity) {
+            createButton();
+        }});
+    
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//button
+// Crea un nuevo elemento de botón
+var button = document.createElement("button");
+
+// Establece el contenido del botón
+button.innerHTML = "Haz clic aquí";
+
+//button funcion de agregar
+
+// Establece los atributos del botón
+button.setAttribute("type", "button");
+button.setAttribute("class", "my-button");
+
+// Agrega el botón a la página web
+document.body.appendChild(button);
+    
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+// Crea una matriz vacía
+var myArray = [];
+
+// Agrega elementos a la matriz utilizando push()
+myArray.push(1);
+myArray.push(2);
+myArray.push(3);
+
+// Imprime la matriz en la consola
+console.log(myArray); // [1, 2, 3]
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//Hacer array normal
+
+var numbers = [1, 2, 3];
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//Solo letras sin cifras js
+function validateInput(input) {
+  // Use a regular expression to only allow letters in the input
+  var lettersOnly = /^[A-Za-z]+$/;
+  if (input.match(lettersOnly)) {
+    // The input is valid, so return true
+    return true;
+  } else {
+    // The input is not valid, so return false
+    return false;
+  }
+}
+//HTML
+//<input type="text" onchange="validateInput(this.value)">
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//Agregar boton si scroll
+// Create a variable to store the button element
+
+
+// Listen for the "scroll" event on the document
+window.addEventListener("scroll", function() {
+  // If the user has scrolled, show the button
+  myButton.style.display = "block";
+});
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function eliminarElementos() {
+  // Obtener todos los elementos que deseamos eliminar
+  var elementos = document.querySelectorAll('.mi-clase');
+
+  // Iterar sobre los elementos y eliminarlos del DOM
+  for (var i = 0; i < elementos.length; i++) {
+    elementos[i].remove();
+  }
+}
+
+// Ejecutar la función cada 10 segundos
+setInterval(eliminarElementos, 10000);
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+function eliminarElementos() {
+  // Obtener todos los elementos que deseamos eliminar
+  var elementobutton = document.querySelector('button:last-child');
+
+  // Iterar sobre los elementos y eliminarlos del DOM
+  for (var i = 0; i < elementobutton.length; i++) {
+    elementobutton[i].remove();
+  }
+}
+
+// Ejecutar la función cada 10 segundos
+setInterval(eliminarElementos, 10000);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    </script>
+</body>
+</html>
